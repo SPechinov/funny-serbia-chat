@@ -20,7 +20,7 @@ export const jokesMessage: AnswerMessage = async (ctx) => {
     return true;
   }
 
-  if (hasInLine(ctx.text.toLowerCase(), ['хаха', 'шутка', 'шучу'])) {
+  if (hasInLine(ctx.text.toLowerCase(), ['хаха', 'ахах', 'шутка', 'шучу'])) {
     await ctx.reply(`смешно - ps ${NICKNAMES.julia}`);
     return true;
   }
