@@ -1,11 +1,12 @@
 import { AnswerMessage } from '../types';
 import { NICKNAMES } from '../constants';
+import { hasInLine } from '../../utils';
 
 export const bmwMessage: AnswerMessage = async (ctx) => {
   if (!ctx.text) return false;
 
   if (ctx.text.indexOf('bmv') >= 0) {
-    await ctx.reply(`Ты че с*ка!${ctx.from?.username ? ` ${ctx.from.username}` : ''}`);
+    await ctx.reply(`Ты че с*ка!${ctx.from?.username ? ` @${ctx.from.username}` : ''}`);
     return true;
   }
 
@@ -19,7 +20,7 @@ export const bmwMessage: AnswerMessage = async (ctx) => {
     return true;
   }
 
-  if (ctx.text.indexOf('бэха') >= 0 || ctx.text.indexOf('беха') >= 0 || ctx.text.indexOf('BMW') >= 0) {
+  if (hasInLine(ctx.text, ['бэха', 'беха', 'BMW'])) {
     await ctx.react('👍');
     return true;
   }
