@@ -18,7 +18,7 @@ const jokesMessage = async (ctx) => {
         await ctx.reply('Давайте без давайте');
         return true;
     }
-    if ((0, utils_1.hasInLine)(ctx.text.toLowerCase(), ['хаха', 'шутка', 'шучу'])) {
+    if ((0, utils_1.hasInLine)(ctx.text.toLowerCase(), ['хаха', 'ахах', 'шутка', 'шучу'])) {
         await ctx.reply(`смешно - ps ${constants_1.NICKNAMES.julia}`);
         return true;
     }
