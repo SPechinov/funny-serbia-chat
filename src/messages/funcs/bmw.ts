@@ -1,4 +1,4 @@
-import { AnswerMessage } from './types';
+import { AnswerMessage } from '../types';
 
 export const bmwMessage: AnswerMessage = async (ctx) => {
   if (!ctx.text) return false;

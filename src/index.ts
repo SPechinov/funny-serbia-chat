@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import { Telegraf } from 'telegraf';
-import { messages } from './messages';
+import { funcs } from './messages';
 
 dotenv.config();
 const { env } = process;
@@ -16,8 +16,8 @@ const { env } = process;
   });
 
   bot.on('message', async (ctx) => {
-    for (let i = 0; i < messages.length; i++) {
-      if (await messages[i](ctx)) return;
+    for (let i = 0; i < funcs.length; i++) {
+      if (await funcs[i](ctx)) return;
     }
   });
 
