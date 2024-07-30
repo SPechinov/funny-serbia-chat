@@ -19,7 +19,7 @@ export const bmwMessage: AnswerMessage = async (ctx) => {
     return true;
   }
 
-  if (ctx.text.indexOf('бэха') >= 0 || ctx.text.indexOf('BMW') >= 0) {
+  if (ctx.text.indexOf('бэха') >= 0 || ctx.text.indexOf('беха') >= 0 || ctx.text.indexOf('BMW') >= 0) {
     await ctx.react('👍');
     return true;
   }
