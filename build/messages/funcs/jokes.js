@@ -22,6 +22,18 @@ const jokesMessage = async (ctx) => {
         await ctx.reply(`смешно - ps ${constants_1.NICKNAMES.julia}`);
         return true;
     }
+    if (ctx.text.indexOf('полако') >= 0) {
+        await Promise.all([
+            ctx.replyWithSticker('CAACAgIAAxkBAAJqNGapQFnT2vE9JhvfCSHGiC9f2QPRAALUCAAC-gu2CH6Lt8yaNscnNQQ'),
+        ]);
+        return true;
+    }
+    if ((0, utils_1.hasInLine)(ctx.text, ['пиво', 'пива', 'пивка'])) {
+        await Promise.all([
+            ctx.replyWithSticker('CAACAgIAAxkBAAJqPWapQNU1Fax3v0akVOkF3WGscH5pAAKxCAAC-gu2CIJMtMvqomueNQQ'),
+        ]);
+        return true;
+    }
     return false;
 };
 exports.jokesMessage = jokesMessage;
