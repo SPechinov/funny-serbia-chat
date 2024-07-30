@@ -25,5 +25,13 @@ export const jokesMessage: AnswerMessage = async (ctx) => {
     return true;
   }
 
+  if (ctx.text.indexOf('полако') >= 0) {
+    await Promise.all([
+      ctx.reply(`О, полако! Пора полежать`),
+      ctx.replyWithSticker('CAACAgIAAxkBAAJqNGapQFnT2vE9JhvfCSHGiC9f2QPRAALUCAAC-gu2CH6Lt8yaNscnNQQ'),
+    ]);
+    return true;
+  }
+
   return false;
 };
